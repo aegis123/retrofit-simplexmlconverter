@@ -18,6 +18,13 @@
         <url>http://www.mobile-professionals.com</url>
     </organization>
 
+    <developers>
+        <developer>
+            <name>Sebastian Engel</name>
+            <email>s.engel@mobile-professionals.com</email>
+        </developer>
+    </developers>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 
