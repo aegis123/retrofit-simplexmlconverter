@@ -19,6 +19,26 @@ RestAdapter restAdapter = new RestAdapter.Builder()
 
 Optionally you can provide your own *Serializer* to the constructor.
 
+
+
+
+
+Download
+--------
+
+Download [the latest JAR][3] or grab via Maven:
+
+```xml
+<dependency>
+    <groupId>com.mobprofs</groupId>
+    <artifactId>retrofit-simplexmlconverter</artifactId>
+    <version>(insert latest version)</version>
+</dependency>
+```
+
+
+
+
 License
 =======
 
@@ -39,3 +59,4 @@ License
 
  [1]: http://square.github.io/retrofit/
  [2]: http://simple.sourceforge.net/
+ [3]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.mobprofs&a=retrofit-simplexmlconverter&v=LATEST
