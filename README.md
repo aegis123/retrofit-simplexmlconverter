@@ -20,13 +20,14 @@ RestAdapter restAdapter = new RestAdapter.Builder()
 Optionally you can provide your own *Serializer* to the constructor.
 
 
+If you are building with ant, [download][3] the Simple XML library and add it to your <code>libs</code> folder manually.
 
 
 
 Download
 --------
 
-Download [the latest JAR][3] or grab via Maven:
+Download [the latest JAR][4] or grab via Maven:
 
 ```xml
 <dependency>
@@ -59,4 +60,5 @@ License
 
  [1]: http://square.github.io/retrofit/
  [2]: http://simple.sourceforge.net/
- [3]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.mobprofs&a=retrofit-simplexmlconverter&v=LATEST
+ [3]: http://simple.sourceforge.net/download.php
+ [4]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.mobprofs&a=retrofit-simplexmlconverter&v=LATEST
