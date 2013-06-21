@@ -1,3 +1,4 @@
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/ccc52c0234f155e4c3e851ece680b4aa "githalytics.com")](http://githalytics.com/mobile-professionals/retrofit-simplexmlconverter)
 retrofit-simplexmlconverter
 ===========================
 
