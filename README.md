@@ -1,13 +1,11 @@
-[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/ccc52c0234f155e4c3e851ece680b4aa "githalytics.com")](http://githalytics.com/mobile-professionals/retrofit-simplexmlconverter)
-retrofit-simplexmlconverter
-===========================
+# retrofit-simplexmlconverter
 
 Converter implementation for Square's [retrofit][1] library which uses [Simple XML][2]
 for serialization and deserialization of entities.
 
 
-Usage
-=======
+
+## Usage
 
 Using the converter is as simple as creating your RestAdapter as usual and calling setConverter(...) with an instance of SimpleXmlConverter:
 
@@ -25,8 +23,7 @@ If you are building with ant, [download][3] the Simple XML library and add it to
 
 
 
-Download
---------
+## Download
 
 Download [the latest JAR][4] or grab via Maven:
 
@@ -39,10 +36,8 @@ Download [the latest JAR][4] or grab via Maven:
 ```
 
 
+## License
 
-
-License
-=======
 
     Copyright 2013 Mobile Professionals
 
@@ -63,3 +58,6 @@ License
  [2]: http://simple.sourceforge.net/
  [3]: http://simple.sourceforge.net/download.php
  [4]: http://repository.sonatype.org/service/local/artifact/maven/redirect?r=central-proxy&g=com.mobprofs&a=retrofit-simplexmlconverter&v=LATEST
+
+
+[![githalytics.com alpha](https://cruel-carlota.pagodabox.com/ccc52c0234f155e4c3e851ece680b4aa "githalytics.com")](http://githalytics.com/mobile-professionals/retrofit-simplexmlconverter)
