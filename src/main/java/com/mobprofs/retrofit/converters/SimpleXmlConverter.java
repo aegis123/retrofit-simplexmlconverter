@@ -47,6 +47,15 @@ public class SimpleXmlConverter implements Converter {
     public SimpleXmlConverter() {
         this.serializer = new Persister();
     }
+    
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link #Persister(org.simpleframework.xml.transform.Matcher)} as serializer.
+     *
+     * @param matcher
+     */
+    public SimpleXmlConverter(RegistryMatcher matcher) {
+        this.serializer = new Persister(matcher);
+    }
 
     /**
      * Constructs a SimpleXmlConverter using the given serializer.
