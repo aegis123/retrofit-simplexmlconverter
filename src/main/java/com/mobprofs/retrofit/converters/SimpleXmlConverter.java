@@ -49,21 +49,194 @@ public class SimpleXmlConverter implements Converter {
     }
     
     /**
-     * Constructs a SimpleXmlConverter using an instance of {@link #Persister(org.simpleframework.xml.transform.Matcher)} as serializer.
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.filter.Filter)} as serializer.
+     *
+     * @param filter
+     */
+    public SimpleXmlConverter(Filter filter) {
+        this.serializer = new Persister(filter);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.filter.Filter, org.simpleframework.xml.stream.Format)} as serializer.
+     *
+     * @param filter
+     * @param format
+     */
+    public SimpleXmlConverter(Filter filter, Format format) {
+        this.serializer = new Persister(filter, format);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.filter.Filter, org.simpleframework.xml.transform.Matcher)} as serializer.
+     *
+     * @param filter
+     * @param matcher
+     */
+    public SimpleXmlConverter(Filter filter, Matcher matcher) {
+        this.serializer = new Persister(filter, matcher);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.filter.Filter, org.simpleframework.xml.transform.Matcher, org.simpleframework.xml.stream.Format)} as serializer.
+     *
+     * @param filter
+     * @param matcher
+     * @param format
+     */
+    public SimpleXmlConverter(Filter filter, Matcher matcher, Format format) {
+        this.serializer = new Persister(filter, matcher, format);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.stream.Format)} as serializer.
+     *
+     * @param format
+     */
+    public SimpleXmlConverter(Format format) {
+        this.serializer = new Persister(format);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(java.util.Map)} as serializer.
+     *
+     * @param filter
+     */
+    public SimpleXmlConverter(Map filter) {
+        this.serializer = new Persister(filter);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(java.util.Map, org.simpleframework.xml.stream.Format)} as serializer.
+     *
+     * @param filter
+     * @param format
+     */
+    public SimpleXmlConverter(Map filter, Format format) {
+        this.serializer = new Persister(filter, format);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.transform.Matcher)} as serializer.
      *
      * @param matcher
      */
-    public SimpleXmlConverter(RegistryMatcher matcher) {
+    public SimpleXmlConverter(Matcher matcher) {
         this.serializer = new Persister(matcher);
     }
 
     /**
-     * Constructs a SimpleXmlConverter using the given serializer.
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.transform.Matcher, org.simpleframework.xml.stream.Format)} as serializer.
      *
-     * @param serializer custom serializer
+     * @param matcher
+     * @param format
      */
-    public SimpleXmlConverter(Serializer serializer) {
-        this.serializer = serializer;
+    public SimpleXmlConverter(Matcher matcher, Format format) {
+        this.serializer = new Persister(matcher, format);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy)} as serializer.
+     *
+     * @param strategy
+     */
+    public SimpleXmlConverter(Strategy strategy) {
+        this.serializer = new Persister(strategy);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy, org.simpleframework.xml.filter.Filter)} as serializer.
+     *
+     * @param strategy
+     * @param filter
+     */
+    public SimpleXmlConverter(Strategy strategy, Filter filter) {
+        this.serializer = new Persister(strategy, filter);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy, org.simpleframework.xml.filter.Filter, org.simpleframework.xml.stream.Format)} as serializer.
+     *
+     * @param strategy
+     * @param filter
+     * @param format
+     */
+    public SimpleXmlConverter(Strategy strategy, Filter filter, Format format) {
+        this.serializer = new Persister(strategy, filter, format);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy, org.simpleframework.xml.filter.Filter, org.simpleframework.xml.transform.Matcher)} as serializer.
+     *
+     * @param strategy
+     * @param filter
+     * @param matcher
+     */
+    public SimpleXmlConverter(Strategy strategy, Filter filter, Matcher matcher) {
+        this.serializer = new Persister(strategy, filter, matcher);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy, org.simpleframework.xml.filter.Filter, org.simpleframework.xml.transform.Matcher, org.simpleframework.xml.stream.Format)} as serializer.
+     *
+     * @param strategy
+     * @param filter
+     * @param matcher
+     * @param format
+     */
+    public SimpleXmlConverter(Strategy strategy, Filter filter, Matcher matcher, Format format) {
+        this.serializer = new Persister(strategy, filter, matcher, format);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy, org.simpleframework.xml.stream.Format)} as serializer.
+     *
+     * @param strategy
+     * @param format
+     */
+    public SimpleXmlConverter(Strategy strategy, Format format) {
+        this.serializer = new Persister(strategy, format);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy, java.util.Map)} as serializer.
+     *
+     * @param strategy
+     * @param data
+     */
+    public SimpleXmlConverter(Strategy strategy, Map data) {
+        this.serializer = new Persister(strategy, data);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy, java.util.Map, org.simpleframework.xml.stream.Format)} as serializer.
+     *
+     * @param strategy
+     * @param data
+     * @param format
+     */
+    public SimpleXmlConverter(Strategy strategy, Map data, Format format) {
+        this.serializer = new Persister(strategy, data, format);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy, org.simpleframework.xml.transform.Matcher)} as serializer.
+     *
+     * @param matcher
+     */
+    public SimpleXmlConverter(Strategy strategy, Matcher matcher) {
+        this.serializer = new Persister(strategy, matcher);
+    }
+
+    /**
+     * Constructs a SimpleXmlConverter using an instance of {@link Persister#Persister(org.simpleframework.xml.strategy.Strategy, org.simpleframework.xml.transform.Matcher, org.simpleframework.xml.stream.Format)} as serializer.
+     *
+     * @param strategy
+     * @param matcher
+     * @param format
+     */
+    public SimpleXmlConverter(Strategy strategy, Matcher matcher, Format format) {
+        this.serializer = new Persister(matcher);
     }
 
     @Override
